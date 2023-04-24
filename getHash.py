@@ -34,10 +34,10 @@ class DragAndDropFile(tk.Frame):
             nombre, extension = os.path.splitext(nombre_completo)
             nuevo_nombre = nombre + '_' + md5 + extension
             os.rename(ruta[0], nuevo_nombre)
-            self.label = tk.Label(self, text=f"El hash es :\n{nuevo_nombre}.", bg="#F7F7F7", fg="red", font=("Arial", 12, "bold"))
+            self.label = tk.Label(self, text=f"El hash es :\n{nuevo_nombre}.", bg="#F7F7F7", fg="red", font=("Garamond", 12, "bold"))
             self.canvas.create_window(90, 110, anchor='nw', window=self.label)
         else:
-            self.label = tk.Label(self, text="Presiona en la ventana para añadir el hash al archivo.", bg="#F7F7F7", fg="red", font=("Arial", 12, "bold"))
+            self.label = tk.Label(self, text="Presiona en la ventana para añadir el hash al archivo.", bg="#F7F7F7", fg="red", font=("Garamond", 12, "bold"))
             self.canvas.create_window(14, 0, anchor='nw', window=self.label)
             self.archivo_arrastrado = False
 
